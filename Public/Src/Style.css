@@ -1,0 +1,314 @@
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: var(--primary-color);
+  font-family: "Lobster Two", sans-serif;
+  font-size: 22px;
+  overflow-x: hidden;
+}
+
+/* Variables */
+
+:root {
+  --primary-blue: #2995dd;
+  --secondery-blue: #0f3b58;
+  --primary-color: #ffffff;
+  --secondery-color: #121212;
+}
+
+/* Toggle Dark Mode */
+.dark-mode {
+  background-color: var(--secondery-color);
+  color: var(--primary-color);
+  border-color: var(--secondery-blue);
+}
+
+/* Navigation */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 5%;
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  cursor: pointer;
+}
+
+.logo-text {
+  margin-left: 2px;
+  transition: all 0.3s ease 0s;
+}
+
+.logo-text:hover {
+  color: var(--primary-blue);
+}
+
+/* Navbar */
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0px 25px;
+}
+nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-blue);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+/* Contact */
+
+.btn {
+  color: inherit;
+}
+
+.btn button {
+  cursor: pointer;
+  padding: 5px 25px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: "Lobster Two";
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--primary-blue);
+  border-radius: 10px;
+  transition: all 0.5s ease 0s;
+  background-color: inherit;
+  color: inherit;
+}
+.btn button:hover {
+  background-color: var(--primary-blue);
+  color: var(--primary-color);
+}
+
+/* Sidenav */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+  background-color: var(--primary-blue);
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: inherit;
+  display: block;
+  transition: 0.3s;
+}
+
+.toggle_sidenav {
+  display: none;
+  color: inherit;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* Content */
+
+.content {
+  margin: 5%;
+  width: auto;
+  color: inherit;
+}
+
+/* Grid Container */
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: minmax(260px, auto);
+}
+
+/* left-Content */
+
+.left-content {
+  display: flex;
+  align-items: center;
+  width: 5vw;
+  height: auto;
+}
+
+.links {
+  color: inherit;
+}
+.icons {
+  padding: 6px 0;
+}
+
+.icons a {
+  color: inherit;
+}
+.icons a i {
+  color: inherit;
+  transition: all 0.3s ease 0s;
+}
+
+.icons a i:hover {
+  color: var(--primary-blue);
+}
+
+/* Main-content */
+
+.main-content {
+  grid-column: span 2 / auto;
+  display: flex;
+}
+
+.upper-intro span {
+  position: relative;
+}
+.upper-intro span::before {
+  content: " ";
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: var(--primary-blue);
+  transition: transform 0.3s ease 0s;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.upper-intro span:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.mid-intro {
+  opacity: 75%;
+}
+.lower-intro {
+  font-size: 18px;
+  opacity: 70%;
+  letter-spacing: 1px;
+}
+.info {
+  font-size: 16px;
+  opacity: 60%;
+  letter-spacing: 1px;
+  margin-top: 2%;
+}
+/* Profile Pic */
+
+.profile_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  width: auto;
+}
+.profile-pic {
+  max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
+  border-style: none;
+  border-radius: 20px;
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+  transition: all 0.3s ease 0s;
+}
+.profile-pic:hover {
+  -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%);
+  -o-filter: brightness(70%);
+  -ms-filter: brightness(70%);
+  filter: brightness(70%);
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 860px) {
+  body {
+    font-size: calc(1.5rem - 1vw);
+  }
+  nav {
+    display: none;
+  }
+  .topbar {
+    height: 6vh;
+  }
+  .main-content {
+    display: inline-block;
+    text-align: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .left-content {
+    width: auto;
+    justify-content: center;
+  }
+
+  .icons {
+    padding: 0 10px;
+    float: right;
+  }
+  .contact {
+    display: none;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 20px;
+  }
+  .toggle_sidenav {
+    display: block;
+  }
+  .profile_container {
+    width: 100%;
+    height: 50vh;
+    grid-column: span 2 / auto;
+  }
+}
+
+/*lowest stable window 872x326.4
+  Navbar visibility window 614x326.4
+  lowest resizable window 454x279.833
+*/

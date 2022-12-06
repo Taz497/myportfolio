@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../Public/Src/Style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/5.14.5/css/font-awesome.min.css"
+    />
+
+    <title>Portfolio | Tazim Hasan</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+
+    <section class="topbar">
+      <div class="logo">
+        <a src="#" class="toggle"
+          ><i onclick="darkMode()" class="far fa-moon"></i
+        ></a>
+
+        <a class="logo-text">Tazim</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="contact">
+        <a class="btn" href="#"><button>Contact me</button></a>
+      </div>
+      <div class="sidenav" id="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+      <a class="toggle_sidenav" id="toggle_sidenav" onclick="openNav()"
+        ><i class="fa fa-bars"></i
+      ></a>
+    </section>
+
+    <!-- Home -->
+
+    <section class="content">
+      <div class="grid_container">
+        <div class="main-content">
+          <div class="left-content">
+            <div class="links">
+              <div class="icons">
+                <a href="https://github.com/Taz497" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+              <div class="icons">
+                <a href="KIDPLAYZH#2032"><i class="fab fa-discord"></i></a>
+              </div>
+              <div class="icons">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="intro-container">
+            <h2 class="upper-intro">Hi,I am <span>Tazim</span></h2>
+            <h4 class="mid-intro">Website Designer</h4>
+            <div class="lower-intro">
+              I am highly experienced in HTML5,CSS3<br />
+              and JavaScript including UI/UX knowledge.If you<br />
+              have any questions feel free to ask!
+            </div>
+            <div class="info">
+              Click on <i class="far fa-moon"></i> to toggle dark mode
+            </div>
+          </div>
+        </div>
+        <div class="profile_container">
+          <div class="profile">
+            <img
+              src="../Public/Assets/Images/Light mode .jpg"
+              alt="Profile-Pic"
+              class="profile-pic"
+              title="Tazim"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../Public/Src/Index.js"></script>
+  </body>
+</html>
